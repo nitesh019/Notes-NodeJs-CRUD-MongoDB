@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+ 
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const methodOverride = require("method-override");
@@ -9,12 +9,12 @@ const passport = require('passport');
 const MongoStore = require('connect-mongo');
 
 const app = express();
-const port = 5000 || process.env.PORT;
+const port = 9028 || process.env.PORT;
 
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: true, 
   store: MongoStore.create({
     mongoUrl: process.env.MONGODB_URI
   }),
